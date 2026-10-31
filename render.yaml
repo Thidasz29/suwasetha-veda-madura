@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: suwasetha-veda-madura
+    env: python
+    buildCommand: "python3 init_db.py"
+    startCommand: "python3 app.py"
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: SUWASETHA_INIT_ADMIN_PASSWORD
+        sync: false
